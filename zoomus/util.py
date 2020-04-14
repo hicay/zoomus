@@ -12,6 +12,11 @@ import jwt
 API_VERSION_1 = 1
 API_VERSION_2 = 2
 
+try:
+    basestring
+except NameError:
+    basestring = str
+
 
 class ApiClient(object):
     """Simple wrapper for REST API requests"""
