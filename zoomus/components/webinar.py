@@ -92,5 +92,5 @@ class WebinarComponentV2(base.BaseComponent):
     def register(self, **kwargs):
         util.require_keys(kwargs, ["id", "email", "first_name", "last_name"])
         return self.post_request(
-            "/webinars/{}/registrants".format(kwargs.get("id")), params=kwargs
+            "/webinars/{}/registrants".format(kwargs.get("id")), data=kwargs
         )
